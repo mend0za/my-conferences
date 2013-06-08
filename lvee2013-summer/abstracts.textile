@@ -1,0 +1,51 @@
+h1. XMPP/Jabber глазами мантейнера сервера Jabber.org.by
+
+Brief history and current state of Jabber.org.by project, first public  Jabber/XMPP server in Belarus. Some reflections to IM  + Jabber in generic added, from the public server maintainer point of view. 
+
+h2. Технология XMPP/Jabber
+
+h3. Подъём и падение XMPP.
+
+h3. Заметки к Второй Мировой Войне среди IM's. 
+
+# ад несовместимых протоколов - Skype, Viber, and so on. 
+# анальное огораживание вендоров - Facebook и остальные. О важности XMPP Federation.
+# Былинный отказ Google Talk. Что же произошло на самом деле, на материалах http://m.habrahabr.ru/post/180159/.
+
+h2. Сервер jabber.org.by
+определение, чем он является, а чем - нет.
+
+h3. История jabber.org.by
+
+* 14 декабря 2004 года. Запуск. Александр Бутенко aka Mr_Death разместил "анонс в рассылке Minsk Linux Users Group":http://article.gmane.org/gmane.user-groups.linux.minsk.general/173 .
+
+* 2006. эмиграция Mr_Death в Доминиканскую Республику.
+
+* март 2008. Переезд на FreeBSD 6.2/jail.
+
+* август 2009. Участие в исправлении утечки памяти в PyICQt
+
+* февраль 2011. Переезд на Debian 6.x/OpenVZ. Переход на сервисы Spectrum.
+
+* сентябрь 2012-май 2013. Борьба с сирийскими ботами.
+
+* июнь 2013. Потеря пользовательских паролей (неудачный апдейт)
+
+h3. Текущее состояние сервера.
+
+Current user base analysis for XMPP/Jabber via j.o.b. statistics.
+
+
+h2. Эволюция из пользователя в мантейнера сервера
+
+В момент старта я был обычным пользователем. В приблизительно 2005-2006 - стал постепенно резервным администратором, а к 2008 - единственным. 
+
+В полном соответствии с классическим эссе Эрика Реймонда "The Cathedral and the Bazaar":
+# пользуюсь сам большей частью функционала
+# слушаю что просят пользователи
+# развитие проекта определяется его пользователями
+# стараюсь по мере сил взаимодействовать с upstream 
+
+
+
+

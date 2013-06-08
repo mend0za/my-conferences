@@ -7,9 +7,9 @@ Brief history and current state of Jabber.org.by project, first public  Jabber/X
 Report cover and touch the topics:
 
 
-* project milestones (the very beginning, team switch, HW migration, fightings with software stack)
+* Project milestones (the very beginning, team switch, HW migration, fightings with software stack)
 
-* long-time user evolution from simple user to single maintainer of the project. Introduce "The Cathedral and the Bazaar" classic essay in the wild life easy samples. 
+* Long-time user evolution from simple user to single maintainer of the project. Introduce "The Cathedral and the Bazaar" classic essay in the wild life easy samples. 
 
 * Current user base analysis for XMPP/Jabber via j.o.b. statistics.
 
