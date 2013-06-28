@@ -1,0 +1,178 @@
+\section{XMPP против других IM}
+
+\subsection{Подъём и падение XMPP}
+\begin{frame}{Подъём \ldots и падение XMPP}
+  \begin{block}{Подъём}
+    Технология XMPP заняла свои позиции. \\
+    Сервисы: Facebook, GTalk, VKontakte, WhatsApp. \\
+    Бизнес-решения: MS Lync, Cisco Unified Presence.
+
+    Позволяют подключится по XMPP или основаны на нём
+  \end{block} \pause
+
+  \begin{block}{\ldots и падение}
+    Разработчики корпоративных и открытых решений множат мало функциональные и/или несовместимые решения.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Метнём коричневые комки правды}
+  \begin{block}{Серверные красавчики}
+    \begin{itemize}
+      \item Отключен s2s : Facebook, Vkontakte, Odnoklassniki
+      \item Нельзя поменять VCard : почти все
+      \item Странное поведение серверов: Google Talk
+      \item Нет server-side history
+      \item Нет поддержки групп : см s2s
+    \end{itemize} 
+  \end{block}\pause
+
+  \begin{block}{Клиентские красавчики}
+    \begin{itemize}
+      \item нет поддержки Service Discovery (imo, im+, xabber)
+      \item нет поддержки multi user chat
+      \item нет групп в ростере (imo)
+    \end{itemize}
+    Особенно мало умеют многопротокольные клиенты\footnote{где XMPP лишь одна из опций}.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Итого}
+  \begin{block}{Теоретическое богатство возможностей XMPP}
+  \end{block}
+
+  \pause
+
+  \begin{block}{\ldots недоступно в качественном коробочном продукте.}
+  \end{block}
+
+  \pause
+
+  \begin{block}{Часто требует ощутимых усилий от оператора сервера \ldots}
+  \end{block}
+  
+  \pause
+
+  \begin{block}{или даже от конечного пользователя \ldots}
+  \end{block}
+\end{frame}
+
+\subsection{Заметки о войнах IM}
+
+\begin{frame}{1я Мировая Война IM}
+    \alert{Время}: от конца 90-х до (приблизительно) 2005. 
+
+    \alert{Предпосылки}: Широкое распространение Internet. Dial-Up. 
+    
+    \alert{Начало}: Появился ICQ. 
+      
+    \alert{Ключевой функционал}: передача текста, сообщения и групповые чаты
+
+    \alert{Кто?}: ICQ, AIM, MSN, Yahoo, IRC
+
+    \alert{Конец войны}: интеграция протоколов и клиентов
+\end{frame}
+
+\begin{frame}{Подходы к IM Protocol Hell}
+  2 магистральных подхода, cформировались в ходе 1й Войны:
+
+  \begin{block}{Многопротокольные клиенты}
+    Miranda, Pidgin, Trillian, Empathy/Telepathy
+  \end{block}
+
+  \pause
+
+  \begin{block}{Сервер-интегратор}
+    Клиент работает по 1 протоколу. 
+    
+    Сервер транслирует протоколы в 1.
+
+    Известные реализации: XMPP/Jabber, MS Lync, imo.im, Cisco Unified Meeting Place
+  \end{block}
+
+\end{frame}
+
+\begin{frame}{Jabber/XMPP - way}
+  \begin{itemize}
+    \item Реверс-инжениринг закрытых протоколов
+    \item Написаны транспорты ко всем известным протоколам
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{2я Мировая Война IM}
+    \alert{Время}:  2005. 
+
+    \alert{Предпосылки}: Широкополосный скоростной интернет
+    
+    \alert{Начало}: Появился Skype. 
+      
+    \alert{Ключевой функционал}: голосовые и видео-звонки
+
+    \alert{Кто?}: Skype, WhatsApp, Google Hangout, Viber, SIP
+
+    \alert{Конец войны}: продолжается
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{goryaschii_tank_u_reki}}
+\begin{frame}{Репортаж из горящего танка\footnote{\alert{Hint: внутри WoT Chat - Jabber}}}
+
+  \alert{
+    \begin{enumerate}
+      \item Cтеки протоколов и технологий: SIP\footnote{\alert{Skype, Viber}} и XMPP\footnote{\alert{WhatsApp}}
+
+      \item Полностью закрытые решения без внешнего API
+
+      \item Производитель воспринимает своих пользователей как свою собственность 
+
+    \end{enumerate}
+  }
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{facebook-logo}}
+\begin{frame}{Анальное огораживание, Facebook-way}
+  \begin{block}{Есть}
+    \begin{enumerate}
+      \item чат с пользователями в Facebook
+      \item публикация статуса онлайн/оффлайн
+      \item несколько соединений одновременно
+    \end{enumerate}
+  \end{block} 
+  \pause
+
+  \begin{block}{Нет / Не работает}
+    \begin{enumerate}
+      \item S2S
+      \item сервисов и транспортов
+      \item групп и управления группами
+      \item видео и аудио
+      \item не работает VCard 
+      \item запутанная схема подключения
+      \item нельзя публиковать и читать материалы в ленте
+      \item нельзя подключать новых пользователей
+    \end{enumerate}
+  \end{block}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{google-talk-logo}}
+\begin{frame}{Былинный отказ: Google Talk}
+  \alert{Whats going on? Факты.}
+
+  \begin{itemize}
+    \item с 2006 до 2013 - GTalk стал крупнейшим сервером XMPP/Jabber
+    \item \alert{ТОЛЬКО} за счёт навязывания Google Talk в нагрузку к GMail и Android\footnote{см словарь - ``Связанная покупка''}. \pause
+    \item Голос, видео и звонки на телефон - позже чем в скайп
+    \item реализация - слабо совместима с остальным XMPP \pause
+    \item Google не замечен в работе над стандартами XMPP
+    \item Единственный вклад - Jingle и GSoC
+  \end{itemize}
+  \pause
+  \alert{Вывод: компания сильно не вкладывалась в XMPP, и выбросила его без сожаления. Вслед за RSS Reader}
+
+\end{frame}
+}
+

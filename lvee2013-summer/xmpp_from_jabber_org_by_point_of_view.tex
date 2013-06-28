@@ -1,0 +1,65 @@
+\documentclass{beamer}
+
+
+\usetheme{Pittsburgh}
+\usefonttheme[onlylarge]{structurebold}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage{pdfpages}
+\usepackage{soul}
+\usepackage{ucs}
+\usepackage{ulem}
+
+% encoding settings
+\usepackage[T2A]{fontenc}
+\usepackage{xltxtra}
+\usepackage{hyperref}
+\usepackage{polyglossia}
+\usepackage{xecyr}
+
+\setdefaultlanguage{russian}
+
+% fonts settings
+\usepackage{fontspec}
+\setmainfont{CMU Serif} % Computer Modern Unicode font
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+
+
+\author[Author, Vlad Shakhov]{Влад 'mend0za' Шахов}
+\institute[Minsk Linux Users Group]
+{
+  Jabber.org.by project
+}
+
+\date[June 28 2013]
+
+\pgfdeclareimage[height=1.5cm]{mlug-logo}{mlug-logo.png}
+\pgfdeclareimage[height=1.5cm]{xmpp-logo}{XMPP-logo.png}
+
+\logo{\pgfuseimage{xmpp-logo}\pgfuseimage{mlug-logo}}
+
+\title{XMPP/Jabber\\(глазами мантейнера jabber.org.by)}
+
+\begin{document}
+
+\include{part1}
+\include{part2}
+\include{part3}
+\include{part4}
+
+
+\section*{Summary}
+\begin{frame}{Вопросы?}
+  \Huge{Вопросы? Предложения? Нервности?}
+
+  \normalsize{site: http://jabber.org.by}
+
+  support: xmpp:support@conference.jabber.org.by?join
+  
+  ID/email: mend0za@jabber.org.by 
+
+\end{frame}
+
+\end{document}

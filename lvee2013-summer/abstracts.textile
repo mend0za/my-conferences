@@ -144,12 +144,12 @@ Hardware:
 * Intel(R) Xeon(R) CPU E5506  @ 2.13GHz . 
 Software: 
 * Debian GNU/Linux 6.x (oldstable)
-* "Ejabberd 2.1.12":http://www.process-one.net/en/ejabberd
+* "Prosody 0.9":http://prosody.im
 * транспорты на основе сервисов "Spectrum2":http://spectrum.im
 
 h2. Вехи развития jabber.org.by
 
-* 14 декабря 2004 года. Запуск. Александр Бутенко aka Mr_Death разместил "анонс в рассылке Minsk Linux Users Group":http://article.gmane.org/gmane.user-groups.linux.minsk.general/173 .
+* 14 декабря 2004 года. Запуск. Александр Бутенко aka Mr_Death разместил "анонс в рассылке Minsk Linux Users Group":http://article.gmane.org/gmane.user-groups.linux.minsk.general/173 
 
 * конец 2005. Пользователи во главе с С.Антоничевым (cymrak), И. Гречишко (booxter)  и Е.Калютой (trenka) по своей инициативе собирают деньги и апгрейдят сервер. "Подробности":https://forum.linux.by/viewtopic.php?f=2&t=8455
 
@@ -170,6 +170,7 @@ h2. Вехи развития jabber.org.by
 
 * июнь 2013. Потеря пользовательских паролей (неудачный апдейт)
 
+* 14 июня 2013. Переход на Prosody.
 
 h2. Текущее состояние сервера.
 
