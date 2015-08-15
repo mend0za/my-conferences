@@ -1,0 +1,111 @@
+\documentclass{beamer}
+
+\usetheme{Pittsburgh}
+\usefonttheme[onlylarge]{structurebold}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage{pdfpages}
+\usepackage{soul}
+\usepackage{ucs}
+\usepackage{ulem}
+
+% encoding settings
+\usepackage[T2A]{fontenc}
+\usepackage{xltxtra}
+\usepackage{hyperref}
+\usepackage{polyglossia}
+\usepackage{xecyr}
+\usepackage{tikz}
+
+\setdefaultlanguage{english}
+
+% fonts settings
+\usepackage{fontspec}
+\setmainfont{CMU Serif} % Computer Modern Unicode font
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+
+
+\author[Author, Vladimir Shakhov]{Vladimir 'mend0za' Shakhov}
+\institute[Fujitsu Technology Solutions]
+{
+  Fujitsu Technology Solutions, R\&D department
+}
+
+\date[\now]
+
+\pgfdeclareimage[height=1.5cm]{fujitsu-logo}{fujitsu-logo.png}
+\pgfdeclareimage[height=3cm]{fujitsu-shaping}{fujitsu-shaping.jpg}
+\pgfdeclareimage[height=5cm]{rx2560m1}{RX2560-M1.jpg}
+%\pgfdeclareimage[height=1.5cm]{xmpp-logo}{XMPP-logo.png}
+
+
+\logo{\pgfuseimage{fujitsu-logo}}
+
+\title{Linux firmware for iRMC controller on Fujitsu Primergy servers}
+
+
+
+\begin{document}
+
+\usebackgroundtemplate{%             declare it
+\tikz[overlay,remember picture] \node[opacity=0.3, at=(current page.center)] {\includegraphics[height=\paperheight]{RX2560-M1.jpg}};
+}
+
+\begin{frame} 
+  \titlepage 
+\end{frame} 
+
+\usebackgroundtemplate{} %unset
+
+\begin{frame}{Table of content}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+
+\section{Fujitsu Primergy servers family}
+  \subsection{What is iRMC}
+  \subsection{Software - ServerView Suite}
+  \subsection{iRMC Firmware}
+  \subsection{Open standarts: IPMI protocol and others}
+  \subsection{Demo: WebIF and IPMI}
+
+\section{From iRMC S1 on ThreadX to iRMC S4 on Linux}
+  \subsection{Early ages - ThreadX : S1 - S3}
+  \subsection{Migration to Linux: S4}
+  \subsection{Demo: RemoteManager - bug-to-bug compatible}
+
+\section{Linux based firmware}
+  \subsection{Components}
+  \subsection{Mixing FOSS and propiertary code}
+  \subsection{Develoment environment}
+  \subsection{Where is the sources?}
+  \subsection{Demo: inside the Linux on iRMC}
+
+
+%\include{part1}
+%\include{part2}
+%\include{part3}
+%\include{part4}
+
+
+\section*{Summary}
+\begin{frame}{Questions? Remarks?}
+  
+  \begin{center}
+    \pgfuseimage{fujitsu-shaping}
+  \end{center}
+
+  \normalsize{Fujitsu Primergy servers: http://www.fujitsu.com/fts/products/computing/servers/primergy/ }
+  \normalsize{iRMC S4 manual: http://manuals.ts.fujitsu.com/file/11470/irmc-s4-ug-en.pdf}
+  
+  \normalsize{Fujitsu Technology Solutions: http://www.fujitsu.com/fts}
+
+  contact: Vladimir.Shakhov@ts.fujitsu.com
+
+
+\end{frame}
+
+\end{document}
