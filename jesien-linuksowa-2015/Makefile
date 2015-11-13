@@ -7,7 +7,7 @@ OUTDIR=out
 all: $(PDF)
 
 $(GRAPHICS): diagrams.uml
-	java -jar $(HOME)/bin/plantuml.8032.jar $<
+	plantuml $<
 
 uml: $(GRAPHICS)
 
