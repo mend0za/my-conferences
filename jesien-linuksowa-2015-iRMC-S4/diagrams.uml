@@ -1,0 +1,76 @@
+@startuml diagrams/embedded-release-cycle.png
+
+(*) -right->[get stable snapshot] "Base System" 
+
+"Base System" -right->[develop] "New Components"
+"Base System" -right->[develop] "IPMI OEM Extensions"
+
+"New Components" -->[integrate] "development build"
+"IPMI OEM Extensions" -->[integrate] "development build"
+"Base System" -->[integrate] "development build"
+
+-left->[test and stabilize] "Customer release"
+
+-left->[repeat from start] (*)
+
+@enduml
+
+@startuml diagrams/irmc-components.png
+
+package "System Daemons" #Yellow {
+	[Web Server] #Cyan
+	[sshd] #Cyan 
+	[snmpd] #Cyan
+}
+
+package "IPMI stack" #Yellow {
+	[IPMI v2.0] #Red
+	[OEM extensions] #Red
+}
+
+package "Apps" #Yellow {
+	[Web IF]
+	[Lifecycle Management]
+	[Remote Manager]
+	[SNMP Agents]
+}
+
+package "Kernel" #Yellow {
+	[Linux kernel]
+	[U-Boot]
+}
+
+package "X86 host" #Green {
+	[Operation System]
+	[ServerView Agents]
+	[BIOS]
+}
+
+BrowserAndTools .down.> [Web Server] : HTTP
+SShClients .down.> [sshd]: SSH
+SnmpClients .down.> [snmpd]: SNMP
+RemoteApps .down.> [IPMI v2.0]: IPMI over LAN
+
+[Web Server] -down- [Web IF]
+[sshd] -down- [Remote Manager]
+[snmpd] -down- [SNMP Agents]
+
+[IPMI v2.0] =up= [Web IF] : IPMI local
+[IPMI v2.0] =up= [Lifecycle Management] : IPMI local
+[IPMI v2.0] =up= [SNMP Agents] : IPMI local
+[IPMI v2.0] =up= [Remote Manager] : IPMI local
+[IPMI v2.0] <.down. [BIOS] : IPMI over I2C
+[IPMI v2.0] <.down. [ServerView Agents] : IPMI over I2C
+
+[Web IF] -right-> [Lifecycle Management] : use
+[BIOS] -up->  [Lifecycle Management] : use
+
+[Linux kernel] -up- [IPMI v2.0]
+[Linux kernel] -left- [U-Boot]
+
+[IPMI v2.0] .right.> [OEM extensions] : use
+
+[Operation System] .right.> [ServerView Agents] : use
+
+@enduml
+
