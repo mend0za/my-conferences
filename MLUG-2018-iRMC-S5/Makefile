@@ -1,4 +1,4 @@
-PDF=irmc_on_linux.pdf
+PDF=irmc_s5_on_linux.pdf
 
 GRAPHICS=diagrams/embedded-release-cycle.png diagrams/irmc-components.png
 
